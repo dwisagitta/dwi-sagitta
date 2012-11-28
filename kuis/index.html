@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+var benar=0;
+var salah=0;
+function tambah(){
+	var tombol=document.getElementById("next");
+	switch(tombol.value){
+	case "Klik untuk memulai":tombol.value="Cek Soal no. 1";
+	return "1";
+	break;
+	case "Cek Soal no. 1":tombol.value="Cek Soal no. 2"; 
+	return "2";
+	break;
+	case "Cek Soal no. 2":tombol.value="Cek Soal no. 3"; 
+	return "3";
+	break;
+	case "Cek Soal no. 3":tombol.value="Cek Soal no. 4"; 
+	return "4";
+	break;
+	case "Cek Soal no. 4":tombol.value="Cek Soal no. 5"; 
+	return "5";
+	break;
+	case "Cek Soal no. 5":tombol.value="Cek Soal no. 6"; 
+	return "6";
+	break;
+	case "Cek Soal no. 6":tombol.value="Cek Soal no. 7"; 
+	return "7";
+	break;
+	case "Cek Soal no. 7":tombol.value="Cek Soal no. 8"; 
+	return "8";
+	break;
+	case "Cek Soal no. 8":tombol.value="Cek Soal no. 9"; 
+	return "9";
+	break;
+	case "Cek Soal no. 9":tombol.value="Cek Soal no. 10"; 
+	return "10";
+	break;
+	case "Cek Soal no. 10":tombol.value="reset"; 
+		document.forms[0].nomer.value="1";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat table adalah"; 
+		document.getElementById("a").value="<table></table>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";	
+		if (benar>7){
+		document.forms[0].hasil.value=
+		"selamat kamu berhasil, Pop Mie akan segera datang padamu, dengan jumlah soal benar : "+(benar+1)+"	jumlah soal salah : "+salah;
+	} else {
+		document.forms[0].hasil.value="anda belum beruntung segera hubungi klinik Tong Fang terdekat dengan jumlah soal benar : "+(benar+1)+"	jumlah soal salah : "+salah;
+	}
+	break;
+	}
+}
+
+function soal(no_soal){
+	var no_soal;
+	var soal;
+	switch(no_soal){
+        case "2": document.forms[0].nomer.value="2";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat paragraf adalah"; 
+		document.getElementById("a").value="<p></p>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "3": document.forms[0].nomer.value="3";
+		document.forms[0].kotak_soal2.value="Tipe file (extention) untuk dokumen HTML adalah"; 
+		document.getElementById("a").value=".html";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "4": document.forms[0].nomer.value="4";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat membuat heading dengan ukuran paling besar adalah"; 
+		document.getElementById("a").value="<h1>";
+		document.getElementById("b").value="<h3>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "5": document.forms[0].nomer.value="5";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat ordered list adalah"; 
+		document.getElementById("a").value="<ol></ol>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "6": document.forms[0].nomer.value="6";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat unordered list adalah"; 
+		document.getElementById("a").value="<ul></ul>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "7": document.forms[0].nomer.value="7";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat judul dari dokumen HTML adalah"; 
+		document.getElementById("a").value="<title></title>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "8": document.forms[0].nomer.value="8";
+		document.forms[0].kotak_soal2.value="Tag untuk mengisi dokumen HTML adalah"; 
+		document.getElementById("a").value="<body></body>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "9": document.forms[0].nomer.value="9";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat tulisan miring adalah"; 
+		document.getElementById("a").value="<em></em>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+		case "10": document.forms[0].nomer.value="10";
+		document.forms[0].kotak_soal2.value="Tag untuk membuat tulisan tebal adalah"; 
+		document.getElementById("a").value="<strong></strong>";
+		document.getElementById("b").value="<h1>";
+		document.getElementById("c").value="<h2>";
+		break;
+
+	}
+}
+
+function cek_jawaban(){
+	var tombol=document.getElementById("next");
+	switch(tombol.value){
+	case "Klik untuk memulai": 
+	if (document.forms[0].pil_a.checked){
+		alert("selamat mengerjakan");
+		benar=benar+1;
+	} else {
+		alert("selamat mengerjakan" );
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 1":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar, kamu mendapat pop Mie");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 2":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 3":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 4":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 5":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 6":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 7":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 8":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;;
+	}
+	break;
+	case "Cek Soal no. 9":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah");
+		salah=salah+1;
+	}
+	break;
+	}
+}
+</script>
+<!-- paste this code into your webpage -->
+<link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
+<!-- end -->
+
+<style>
+
+body{
+	margin:0;
+	padding:0;
+	background:#f1f1f1;
+	font:70% Arial, Helvetica, sans-serif; 
+	color:#555;
+	line-height:150%;
+	text-align:left;
+}
+a{
+	text-decoration:none;
+	color:#057fac;
+}
+a:hover{
+	text-decoration:none;
+	color:#999;
+}
+h1{
+	font-size:140%;
+	margin:0 20px;
+	line-height:80px;	
+}
+h2{
+	font-size:120%;
+}
+#container{
+	margin:0 auto;
+	width:680px;
+	background:#fff;
+	padding-bottom:20px;
+}
+#content{margin:0 20px;}
+p.sig{	
+	margin:0 auto;
+	width:680px;
+	padding:1em 0;
+}
+form{
+	margin:1em 0;
+	padding:.2em 20px;
+	background:#eee;
+}
+</style>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+<table width="873" height="208" border="1">
+  <tr>
+    <td width="129">
+    <textarea name="nomer" cols="1" rows="1" readonly >1</textarea>
+    </td>
+    <td width="1039">
+    <textarea name="kotak_soal2" cols="80" rows="6" readonly  >Tag untuk membuat table adalah</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="radio" name="radio" id="pil_a" value="pil_a" >
+      <label for="pil_a" ></label>
+    </td>
+    <td>    
+      <input type="text" name="a" id="a" value="<table></table>" readonly >
+      <label for="a" ></label>
+	</td>
+  </tr>
+  <tr>
+    <td>
+      <input type="radio" name="radio" id="pil_b" value="pil_b">
+      <label for="pil_a" ></label>
+    </td>
+    <td>
+      <input type="text" name="b" id="b" value="<h1>" readonly >
+      <label for="pil_b" ></label>    
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="radio" name="radio" id="pil_c" value="pil_c">
+      <label for="pil_c" ></label>
+    </td>
+    <td>
+      <input type="text" name="c" id="c" value="<h2>" readonly >
+      <label for="pil_c" ></label>
+    </td>
+  </tr>
+</table>
+<p>
+  <input type="button" name="next" id="next" value="Klik untuk memulai" onClick="soal(tambah());cek_jawaban();" />
+  <textarea name="hasil" id="hasil" cols="30" rows="4" readonly></textarea>
+  <label for="hasil"></label>
+</p>
+</form>
+</body>
+</html>
