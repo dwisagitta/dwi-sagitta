@@ -1,11 +1,19 @@
 /*
 CSS Credit: http://www.templatemo.com/
 */
+
+
+@font-face { 
+  font-family: kap-chalkdust; 
+    src: url('/font/kap-chalkdust.ttf'); 
+   Regular.ttf'); 
+} 
+
 body {
 	margin: 0px;
 	padding: 0px;
 	color: #e9e9e4;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "kap-chalkdust";
 	font-size: 14px;
 	line-height: 1.5em; 
 	background-color: #373830;
@@ -78,7 +86,7 @@ em { color: #d1e050; }
 	text-decoration: underline;
 }
 
-.col_550 { width: 700px; float:right } 
+.col_550 { width: 700px; float:left } 
 .col_300 { width: 300px; }
 .col_380 { width: 380px; }
 
@@ -132,7 +140,7 @@ em { color: #d1e050; }
 	padding: 5px; 
 	background: #fff; 
 	border: 1px solid #dfdfdf; 
-	font-family: Verdana,Geneva,sans-serif;
+	font-family: kap-chalkdust;
     font-size: 12px;
 }
 
@@ -148,7 +156,7 @@ em { color: #d1e050; }
 	height: 70px; padding: 5px; 
 	background: #fff; 	
 	border: 1px solid #dfdfdf;
-	font-family: Verdana,Geneva,sans-serif;
+	font-family: kap-chalkdust;
     font-size: 12px; 
 }
 

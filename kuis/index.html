@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -39,7 +40,7 @@ function tambah(){
 	case "Cek Soal no. 9":tombol.value="Cek Soal no. 10"; 
 	return "10";
 	break;
-	case "Cek Soal no. 10":tombol.value="reset"; 
+	case "Cek Soal no. 10":tombol.value="refresh browser anda"; 
 		document.forms[0].nomer.value="1";
 		document.forms[0].kotak_soal2.value="Tag untuk membuat table adalah"; 
 		document.getElementById("a").value="<table></table>";
@@ -131,10 +132,10 @@ function cek_jawaban(){
 	break;
 	case "Cek Soal no. 1":
 	if (document.forms[0].pil_a.checked){
-		alert("jawaban anda benar, kamu mendapat pop Mie");
+		alert("jawaban anda benar, ");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <table></table>");
 		salah=salah+1;;
 	}
 	break;
@@ -143,7 +144,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <p></p>");
 		salah=salah+1;;
 	}
 	break;
@@ -152,7 +153,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah .html");
 		salah=salah+1;;
 	}
 	break;
@@ -161,7 +162,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <h1>");
 		salah=salah+1;;
 	}
 	break;
@@ -170,7 +171,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <ol></ol>");
 		salah=salah+1;;
 	}
 	break;
@@ -179,7 +180,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <ul></ul>");
 		salah=salah+1;;
 	}
 	break;
@@ -188,7 +189,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <title></title>");
 		salah=salah+1;;
 	}
 	break;
@@ -197,7 +198,7 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <body></body>");
 		salah=salah+1;;
 	}
 	break;
@@ -206,7 +207,16 @@ function cek_jawaban(){
 		alert("jawaban anda benar");
 		benar=benar+1;
 	} else {
-		alert("jawaban anda salah");
+		alert("jawaban anda salah, jawaban yang benar adalah <em></em>");
+		salah=salah+1;
+	}
+	break;
+	case "Cek Soal no. 10":
+	if (document.forms[0].pil_a.checked){
+		alert("jawaban anda benar");
+		benar=benar+1;
+	} else {
+		alert("jawaban anda salah, jawaban yang benar adalah <strong></strong>");
 		salah=salah+1;
 	}
 	break;
